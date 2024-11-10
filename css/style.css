@@ -1,0 +1,212 @@
+:root {
+  --White: #ffffff;
+
+  --Stone-100: #f3e6d8;
+  --Stone-150: #e4ded8;
+  --Stone-600: #5f574e;
+  --Stone-900: #302d2c;
+  --Brown-800: #854632;
+  --Rose-800: #7b284f;
+  --Rose-50: #fff5fa;
+
+  --fuente-principal: "Outfit", sans-serif;
+  --fuente-secundaria: "Young Serif", serif;
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-size: 1.6rem;
+  font-family: var(--fuente-principal);
+  line-height: 1.5;
+  background-color: var(--Stone-100);
+}
+img {
+  max-width: 100%;
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--Stone-900);
+  font-weight: 900;
+  margin: 0;
+}
+
+[class*="contenedor"] {
+  max-width: 120rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (min-width: 765px) {
+  .contenedor {
+    width: 45%;
+    margin: 15rem auto;
+  }
+
+  img {
+    border-radius: 2rem;
+  }
+}
+
+.cart__contenido {
+  padding: 3rem;
+  margin-top: 0;
+}
+
+@media (min-width: 765px) {
+  .cart__contenido {
+    padding: 0;
+  }
+}
+
+/*card*/
+
+.card {
+  background-color: var(--White);
+}
+
+@media (min-width: 765px) {
+  .card {
+    padding: 3rem;
+    border-radius: 4rem;
+  }
+}
+
+.card__heading {
+  font-size: 3.5rem;
+  font-family: var(--fuente-secundaria);
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.card__text {
+  color: var(--Stone-600);
+  font-size: 1.2rem;
+}
+
+/*preparacion*/
+
+.card__preparacion {
+  background-color: var(--Rose-50);
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.preparacion__heading {
+  color: var(--Rose-800);
+  margin-bottom: 1rem;
+  margin-top: 0;
+}
+
+.preparacion__tabla {
+  line-height: 3rem;
+  color: var(--Stone-600);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.preparacion__tabla li span {
+  font-weight: 600;
+}
+
+/*ingredientes*/
+
+.ingredientes__heading,
+.instruciones__heading,
+.nutricion__heading {
+  color: var(--Brown-800);
+  font-size: 3rem;
+  font-family: var(--fuente-secundaria);
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.ingredientes__tabla {
+  color: var(--Stone-600);
+  line-height: 3rem;
+}
+
+/*instruciones*/
+
+.card__instruciones,
+.card__nutricion {
+  border-top: 1px solid var(--Stone-150);
+}
+
+.instruciones__tabla {
+  list-style: decimal;
+  color: var(--Stone-600);
+}
+
+.instruciones__tabla li::marker {
+  color: var(--Brown-800);
+  font-weight: 700;
+}
+
+.instruciones__tabla li {
+  padding-left: 1rem;
+}
+
+.instruciones__tabla li span {
+  font-weight: 800;
+}
+
+/*nutricion*/
+
+.nutricion__tabla {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.nutricion__tabla tr {
+  border-top: 1px solid var(--Stone-150);
+}
+
+.nutricion__tabla tr:nth-child(1) {
+  border-top: none;
+}
+
+.nutricion__tabla td {
+  padding: 0.75rem 1rem;
+}
+
+.nutricion__tabla td:not(.tabla__totales) {
+  padding-right: 2rem;
+}
+
+.tabla__totales {
+  color: var(--Brown-800);
+  font-weight: 800;
+}
+
+/*footer*/
+
+.attribution {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 5rem;
+}
+
+.attribution_text {
+  color: var(--Stone-600);
+  margin: 0;
+}
+
+@media (min-width: 765px) {
+  .attribution {
+    flex-direction: row;
+    margin-bottom: 2rem;
+    gap: 1rem;
+  }
+}
